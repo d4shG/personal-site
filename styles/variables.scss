@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&family=Exo+2:wght@400;500;700&display=swap');
+
+/* Fonts */
+$font: "Ubuntu", Arial, Helvetica, sans-serif;
+$heading-font: "Exo 2", Roboto, Arial, Helvetica, sans-serif;
+
+$background-dark: #292A2B; 
+$background-shade-dark: #1F2022;
+$primary-dark: #FF75B5; 
+$primary-shade-dark: #FF75B566; 
+$accent-dark: #19F9D8; 
+$accent-shade-dark: #19F9D84D; 
+$text-dark: #E6E6E6; 
+$text-shade-dark: #BFBFBF; 
+$heading-text-dark: #FFB86C; 
+
+
+
+/* Light theme variables */
+$background-light: #FAFAFA; 
+$background-shade-light: #EDEDED;
+$primary-light: #44475A; 
+$primary-shade-light: #44475A68;
+$accent-light: #FF79C6; 
+$accent-shade-light: #FF79C64D;
+$text-light: #282A36;
+$text-shade-light: #6272A4;
+$heading-text-light: #8BE9FD; 
+
+
+$background: $background-dark;
+$background-shade: $background-shade-dark;
+$primary: $primary-dark;
+$primary-shade: $primary-shade-dark;
+$accent: $accent-dark;
+$accent-shade: $accent-shade-dark;
+$text: $text-dark;
+$text-shade: $text-shade-dark;
+$heading-text: $heading-text-dark;
