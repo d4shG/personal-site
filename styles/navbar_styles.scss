@@ -1,0 +1,53 @@
+.navbar {
+    position: relative;
+
+    &-container {
+        z-index: 500;
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 2.5rem;
+
+        .show-nav{
+            transform: translateX(-2.75%);
+        }
+    }
+
+    &-menu {
+        background: $accent-shade;
+        backdrop-filter: blur(50px);
+        padding: 1.5rem 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        border-bottom: 3px solid $accent;
+        font-size: 1.5rem;
+        border-radius: 1.25rem 0.3rem;
+
+        a {
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+            gap: 0.15rem;
+            transition: 0.35s ease-in-out;
+            color: $heading-text
+
+        }
+
+        svg{
+            font-size: 1.25rem;
+        }
+
+        li:hover a, li:hover h4 {           
+            color: $background-shade;
+        }
+
+        li a.current, li a.current h4 {           
+            color: $accent;
+        }
+
+    }
+
+}
