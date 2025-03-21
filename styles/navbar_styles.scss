@@ -7,10 +7,6 @@
         left: 50%;
         transform: translateX(-50%);
         bottom: 2.5rem;
-
-        .show-nav{
-            transform: translateX(-2.75%);
-        }
     }
 
     &-menu {
@@ -22,32 +18,50 @@
         align-items: center;
         gap: 1.5rem;
         border-bottom: 3px solid $accent;
-        font-size: 1.5rem;
+        font-size: 2rem;
         border-radius: 1.25rem 0.3rem;
 
         a {
+            position: relative;
             display: flex;
-            flex-direction: column-reverse;
             justify-content: center;
             align-items: center;
-            gap: 0.15rem;
+            color: $heading-text;
+            text-decoration: none;
             transition: 0.35s ease-in-out;
-            color: $heading-text
+
+            h4 {
+                position: absolute;
+                top: -3.5rem;
+                left: 50%;
+                transform: translateX(-50%);
+                visibility: hidden;
+                opacity: 0;
+                transition: visibility 0s, opacity 0.35s ease-in-out;
+                font-size: 1.5rem;
+                white-space: nowrap;
+            }
+
+            &:hover h4 {
+                visibility: visible;
+                opacity: 1;
+            }
+
+            svg {
+                z-index: 1;
+            }
+
 
         }
 
-        svg{
-            font-size: 1.25rem;
-        }
-
-        li:hover a, li:hover h4 {           
+        li:hover a, li:hover a.current {
             color: $background-shade;
         }
 
-        li a.current, li a.current h4 {           
+        li a.current,
+        li a.current h4 {
             color: $accent;
         }
-
     }
 
 }

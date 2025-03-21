@@ -35,7 +35,7 @@ const Header = () => {
             <div className="wrapper">
                 <div className="header-container">
                     <div className="header-logo">
-                        <span>-G</span>
+                        <h1>-G</h1>
                     </div>
                     <div className="header-buttons">
                         <div className="main-button">

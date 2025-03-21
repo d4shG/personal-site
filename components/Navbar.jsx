@@ -1,8 +1,7 @@
 import React from 'react'
-import { IoTerminal, IoClose } from "react-icons/io5";
+import { IoTerminal } from "react-icons/io5";
 import { RiRobot3Fill } from "react-icons/ri";
 import { FaGears, FaLaptopCode } from "react-icons/fa6";
-import { GiHamburgerMenu } from "react-icons/gi";
 import { LuBotMessageSquare } from "react-icons/lu";
 import Link from 'next/link';
 
@@ -10,9 +9,6 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="navbar-container">
-                <div className="show-nav">
-                    <IoClose />
-                </div>
                 <ul className="navbar-menu">
                     <li>
                         <Link href="#home" className="current">

@@ -5,6 +5,7 @@
     left: 0;
     padding: 1rem 0;
     transition: 0.35s ease-in-out;
+    z-index: 500;
 
     &-container {
         width: 100%;
@@ -14,10 +15,11 @@
     }
 
     &-logo {
-        span {
+        h1 {
             font-size: 2.75rem;
             font-weight: 700;
             transition: 0.35s ease-in-out;
+            color: $text;
             
             &:hover {
                 color: $primary;

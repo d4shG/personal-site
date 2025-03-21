@@ -172,7 +172,7 @@ button {
         }
 
         background-color: $primary-shade;
-        border-color: transparent;
+        border-color: $primary;
     }
 
     @include respond(tablet-portrait) {
