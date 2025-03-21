@@ -1,0 +1,81 @@
+.services {
+  position: relative;
+    padding: 2rem 0;
+    height: 40svh;
+    background-color: $background-shade;  
+    &-title {
+      text-align: center;
+      margin-bottom: 1rem;
+      
+      h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+    }
+  
+    &-categories {
+      display: flex;
+      justify-content: space-around;
+      gap: 1.5rem;
+      margin-top: 2.25rem;
+    }
+  
+    &-category {
+      background-color: $background-shade;
+      padding: 1rem;
+      width: 45%;
+      border-radius: 1rem;
+      border: 2px solid $text-shade;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      position: relative;
+      font-family: $heading-font;
+      transition: 0.35s ease;
+      overflow: hidden; 
+  
+      &:hover {
+        border-color: $primary;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+      }
+  
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $accent;
+        margin-bottom: 15px;
+        text-align: center;
+        border-bottom: 1px solid $text-shade;
+        padding-bottom: 10px;
+      }
+  
+      .folder {
+        margin: 10px 0;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+        color: $text-shade;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: color 0.3s ease, transform 0.3s ease;
+  
+        &:hover {
+          color: $primary;
+          transform: scale(1.05); 
+        }
+  
+        svg {
+          margin-right: 10px;
+          color: $accent;
+          transition: transform 0.3s ease;
+  
+          &:hover {
+            transform: rotate(15deg); 
+          }
+        }
+      }
+    }
+  }
+  
