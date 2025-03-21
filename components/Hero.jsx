@@ -37,19 +37,10 @@ const Hero = () => {
                         height={750}
                         width={750}
                     />
-                    <div className="hero-user-info">
-
                     <div className="hero-user-text">
                         <h2>Hello world!</h2>
                         <h1>-G</h1>
                         <p>Coding Lorem ipsum</p>
-                    </div>
-                    <div className="main-button">
-                        <Link href="#contact">
-                            <span>Contact me</span>
-                            <LuBotMessageSquare />
-                        </Link>
-                    </div>
                     </div>
                 </div>
 
