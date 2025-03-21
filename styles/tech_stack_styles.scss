@@ -1,0 +1,68 @@
+.tech-stack {
+    background-color: $background;
+    color: $text;
+    padding: 60px 0;
+  
+    &-title {
+      text-align: center;
+      margin-bottom: 40px;
+  
+      h3 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+    }
+  
+    &-icons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+  
+    &-icon {
+      background-color: $background-shade;
+      padding: 1.25rem;
+      text-align: center;
+      width: 7rem;
+      position: relative;
+      transition: 0.35s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      border-radius: 1.25rem 0.3rem;  
+      transform: perspective(500px) rotateX(10deg) skew(5deg); 
+      
+      svg {
+        color: $accent;
+        transition: 0.35s ease;
+      }
+  
+      h5 {
+        margin-top: 10px;
+        font-size: 1rem;
+        text-transform: capitalize;
+        opacity: 0;
+        position: absolute;
+        bottom: -2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: 0.35s ease;
+      }
+  
+      &:hover {
+        background-color: $primary;
+        svg {
+          color: $background;
+        }
+  
+        h5 {
+          opacity: 1;
+        }
+  
+        transform: perspective(500px) rotateX(0deg) scale(1.1) skew(0deg); 
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); 
+      }
+    }
+  }
+  
