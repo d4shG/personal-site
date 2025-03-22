@@ -1,0 +1,317 @@
+.portfolio {
+    position: relative;
+    padding: 5rem 0 2rem;
+    height: 50svh;
+    background-color: $background;
+
+    @include respond(tablet-landscape) {
+        height: auto; 
+    }
+
+    @include respond(phone) {
+        padding: 1.5rem 0;
+        height: auto;
+    }
+
+    &-title {
+        text-align: center;
+        margin-bottom: 2rem;
+
+        h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+
+            @include respond(tablet-landscape) {
+                font-size: 2.5rem;
+            }
+
+            @include respond(phone) {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    &-carousel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        padding: 2rem;
+        gap: 2rem;
+        overflow: hidden;
+        transition: transform 0.5s ease;
+        flex-wrap: wrap;
+
+        @include respond(tablet-landscape) {
+            gap: 1.5rem;
+        }
+
+        @include respond(phone) {
+            gap: 1rem;
+        }
+    }
+
+    .portfolio-item-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        margin: 0 1rem;
+        transition: transform 0.3s ease;
+        position: relative;
+
+        @include respond(phone) {
+            width: 100%;
+            margin: 0;
+        }
+    }
+
+    .not-selected {
+        filter: blur(3px);
+        pointer-events: none;
+        cursor: not-allowed;
+    }
+
+    .portfolio-item {
+        background-color: $background-shade;
+        padding: 1.5rem;
+        border-radius: 1.25rem;
+        width: 90%;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        overflow: hidden;
+
+        &:hover {
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+            transform: scale(1.05);
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: $accent;
+            margin-bottom: 1rem;
+            text-align: center;
+            border-bottom: 1px solid $text-shade;
+            padding-bottom: 10px;
+
+            @include respond(phone) {
+                font-size: 1.4rem; 
+            }
+        }
+
+        p {
+            font-size: 1rem;
+            color: $text-shade;
+            text-align: center;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+
+            @include respond(phone) {
+                font-size: 0.9rem;
+            }
+        }
+
+        &.changing {
+            animation: fadeIn 0.75s ease-in-out;
+        }
+    }
+
+    .carousel-button {
+        background-color: transparent;
+        border: none;
+        font-size: 2rem;
+        color: $accent;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        padding: 0.5rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+
+        &:hover {
+            color: $primary;
+        }
+    }
+
+    .prev-button {
+        left: 5rem;
+        color: $text;
+
+        @include respond(phone) {
+            left: 0;
+        }
+    }
+
+    .next-button {
+        right: 5rem;
+        color: $text;
+
+        @include respond(phone) {
+            right: 0; 
+        }
+    }
+
+    .prev-item,
+    .next-item {
+        width: 50%;
+        opacity: 0.6; 
+        transition: opacity 0.3s ease, transform 0.3s ease;
+
+        @include respond(phone) {
+            display: none;
+        }
+    }
+
+    .prev-item {
+        transform: translateX(-10%);
+    }
+
+    .next-item {
+        transform: translateX(10%);
+    }
+
+    .portfolio-item-container.show-prev .prev-item {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .portfolio-item-container.show-next .next-item {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 0.6; 
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+.modal {
+    &-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    &-content {
+        background-color: $background;
+        padding: 40px;
+        max-width: 90%;
+        max-height: 90%;
+        overflow-y: auto; 
+        border-radius: 12px;
+        position: relative;
+        color: $text;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+        overflow: hidden; 
+
+        h1,
+        h2,
+        h3 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: $text-shade;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        a {
+            color: $primary;
+            text-decoration: none;
+    
+            &:hover {
+                color: $primary-shade;
+            }
+        }
+
+         .markdown-content {
+                overflow-y: auto;
+                padding: 1rem;
+                width: 95%;
+                white-space: normal; 
+                word-wrap: break-word;
+                overflow-wrap: break-word; 
+
+                pre, code {
+                    white-space: pre-wrap;
+                    word-wrap: break-word;  
+                    overflow-wrap: break-word;
+                }
+                
+            }
+
+        @include respond(tablet-portrait) {
+            padding: 1rem; 
+            max-width: 100%; 
+            max-height: 100%;
+            border-radius: 0;
+            overflow-y: auto; 
+            height: 100%; 
+            position: fixed; 
+            top: 0;
+            left: 0;
+
+            h1, h2, h3 {
+                font-size: 1.5rem; 
+                margin-bottom: 15px;
+            }
+
+            p {
+                font-size: 0.9rem; 
+                line-height: 1.4;
+            }
+            
+        }
+    }
+
+    &-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        font-size: 1.8rem;
+        color: $accent;
+        cursor: pointer;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $accent-shade;
+        }
+
+        @include respond(tablet-landscape) {
+            top: 10px; 
+            right: 10px;
+            font-size: 2rem;
+        }
+    }
+}
