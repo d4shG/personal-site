@@ -22,14 +22,14 @@ export const servicesData = [
 export const projects = [
     {
       title: "This site💟",
-      markdownFile: "https://raw.githubusercontent.com/d4shG/personal-site/refs/heads/main/README.md",
+      markdownFile: `https://raw.githubusercontent.com/${process.env.NEXT_PUBLIC_USERNAME}/personal-site/refs/heads/main/README.md`,
     },
     {
       title: "Aurum",
-      markdownFile: "https://raw.githubusercontent.com/Aurum-ElProyecteGrande/aurum/refs/heads/main/README.md",
+      markdownFile: `https://raw.githubusercontent.com/Aurum-ElProyecteGrande/aurum/refs/heads/main/README.md`,
     },
      {
       title: "SolarWatch",
-      markdownFile: "https://raw.githubusercontent.com/d4shG/solarwatch-ci/refs/heads/main/README.md",
+      markdownFile: `https://raw.githubusercontent.com/${process.env.NEXT_PUBLIC_USERNAME}/solarwatch-ci/refs/heads/main/README.md`,
     },
   ];

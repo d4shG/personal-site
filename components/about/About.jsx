@@ -13,7 +13,7 @@ const About = () => {
     useEffect(() => {
         const fetchGitHubData = async () => {
             try {
-                const response = await fetch('https://api.github.com/users/d4shG');
+                const response = await fetch(`https://api.github.com/users/${process.env.NEXT_PUBLIC_USERNAME}`);
                 const data = await response.json();
     
                 const createdAt = new Date(data.created_at);
