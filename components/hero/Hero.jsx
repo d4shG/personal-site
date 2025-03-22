@@ -1,6 +1,5 @@
 import React from 'react'
 import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
-import { LuBotMessageSquare } from "react-icons/lu";
 import { PiMouseScrollFill } from "react-icons/pi";
 import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
 import Link from 'next/link';
@@ -9,6 +8,9 @@ import heroPic from '@/imgs/heroPic.png'
 
 
 const Hero = () => {
+    const github = process.env.NEXT_PUBLIC_GITHUB_LINK;
+    const linkedin = process.env.NEXT_PUBLIC_LINKEDIN_LINK;
+    
     return (
         <section className="hero" id="home" data-aos="zoom-in">
             <div className="hero-container">
@@ -18,12 +20,12 @@ const Hero = () => {
                     <div className="hero-social-line"></div>
                     <ul className="hero-social-icons">
                         <li>
-                            <Link href="#">
+                            <Link href={github}>
                                 <FaGithubSquare />
                             </Link>
                         </li>
                         <li>
-                            <Link href="#">
+                            <Link href={linkedin}>
                                 <FaLinkedin />
                             </Link>
                         </li>
