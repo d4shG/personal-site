@@ -1,11 +1,14 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import duckie from "@/imgs/duckie.png";
 import Image from "next/image";
 
 const DuckieCard = () => {
-  const [duckies, setDuckies] = useState(123);
-  const [isAnimating, setIsAnimating] = useState(false);
+   const [isAnimating, setIsAnimating] = useState(false);
+   const currentDate = new Date();
+   const startOfYear = new Date(currentDate.getFullYear(), 0, 1);  
+   const daysPassed = Math.floor((currentDate - startOfYear) / (1000 * 60 * 60 * 24)); 
+   const [duckies, setDuckies] = useState(daysPassed);
 
   const handleClick = () => {
     if (isAnimating) return; 

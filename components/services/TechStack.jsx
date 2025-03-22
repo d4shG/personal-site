@@ -1,11 +1,11 @@
 import React from 'react';
-// Correct imports from react-icons
 import { FaReact, FaNodeJs, FaDocker, FaGitAlt } from 'react-icons/fa';
-import { SiExpress, SiFirebase, SiPostgresql, SiPostman, SiNextdotjs } from 'react-icons/si';
+import { SiExpress, SiFirebase, SiPostgresql, SiPostman, SiNextdotjs, SiDotnet } from 'react-icons/si';
 import { FaGithub } from "react-icons/fa6";
 import { PiFileSql } from 'react-icons/pi';
 import { IoLogoSass } from 'react-icons/io';
 import { IoLogoVercel } from "react-icons/io5";
+import { TbBrandCSharp } from "react-icons/tb";
 
 const TechStack = () => {
   return (
@@ -14,6 +14,14 @@ const TechStack = () => {
         <h3>My Tech Stack</h3>
       </div>
       <div className="tech-stack-icons">
+      <div className="tech-stack-icon">
+          <TbBrandCSharp size={50} />
+          <h5>C#</h5>
+        </div>
+        <div className="tech-stack-icon">
+          <SiDotnet size={50} />
+          <h5>.Net</h5>
+        </div>
         <div className="tech-stack-icon">
           <FaReact size={50} />
           <h5>React</h5>
