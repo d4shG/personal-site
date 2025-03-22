@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer-container wrapper">
-                <p>© 2025 Your Website Name. All rights reserved.</p>
+                <p>© 2025 dashG. All rights reserved.</p>
                 <div className="footer-icon">
                     <Image
                         id="hero-pic"

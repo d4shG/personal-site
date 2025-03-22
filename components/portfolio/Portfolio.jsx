@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Modal from './Modal';
 import MarkdownRenderer from './MarkdownRenderer';
 import { TbPlayerTrackNextFilled, TbPlayerTrackPrevFilled } from "react-icons/tb";
+import { projects } from '@/scripts/data';
 
 const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -10,20 +11,7 @@ const Portfolio = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [changing, setChanging] = useState(false);
 
-  const projects = [
-    {
-      title: "This site💟",
-      markdownFile: "https://raw.githubusercontent.com/gb4rt0s/personal-site/refs/heads/main/README.md",
-    },
-    {
-      title: "Aurum",
-      markdownFile: "https://raw.githubusercontent.com/Aurum-ElProyecteGrande/aurum/refs/heads/main/README.md",
-    },
-     {
-      title: "SolarWatch",
-      markdownFile: "https://raw.githubusercontent.com/gb4rt0s/solarwatch-ci/refs/heads/main/README.md",
-    },
-  ];
+
 
   useEffect(() => {
     const fetchPreview = async () => {
