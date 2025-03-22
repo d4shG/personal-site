@@ -3,10 +3,12 @@
     width: 100%;
     top: 0;
     left: 0;
-    padding: 1rem 0;
+    padding-top: 1rem;
     transition: 0.35s ease-in-out;
     z-index: 500;
-
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    
     &-container {
         width: 100%;
         display: flex;
@@ -20,6 +22,7 @@
             font-weight: 700;
             transition: 0.35s ease-in-out;
             color: $text;
+            cursor: pointer;
             
             &:hover {
                 color: $primary;

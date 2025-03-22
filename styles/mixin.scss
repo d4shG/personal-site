@@ -18,14 +18,3 @@
     }
 }
 
-@mixin light-theme {
-    $background: $background-light;
-    $background-shade: $background-shade-light;
-    $primary: $primary-light;
-    $primary-shade: $primary-shade-light;
-    $accent: $accent-light;
-    $accent-shade: $accent-shade-light;
-    $text: $text-light;
-    $text-shade: $text-shade-light;
-    $heading-text: $heading-text-light;
-}

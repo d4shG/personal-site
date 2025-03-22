@@ -1,0 +1,36 @@
+.footer {
+    background-color: $background-shade;
+    padding: 2rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+
+    .footer-container {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+
+        p {
+            margin: 0; 
+        }
+
+        .footer-icon {
+            display: flex;
+            justify-content: flex-end; 
+            font-size: 2rem;
+
+            img{
+                height: 3rem;
+                border-radius: 50%;
+                width: auto;
+            }
+
+            &:hover {
+                color: $primary; 
+            }
+        }
+    }
+}

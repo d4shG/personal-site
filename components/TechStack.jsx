@@ -9,7 +9,7 @@ import { IoLogoVercel } from "react-icons/io5";
 
 const TechStack = () => {
   return (
-    <section className="tech-stack">
+    <section className="tech-stack" id="services" data-aos="fade-up">
       <div className="tech-stack-title">
         <h3>My Tech Stack</h3>
       </div>

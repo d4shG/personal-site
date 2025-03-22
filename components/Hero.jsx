@@ -7,9 +7,10 @@ import Link from 'next/link';
 import Image from "next/image"
 import heroPic from '@/imgs/heroPic.png'
 
+
 const Hero = () => {
     return (
-        <section className="hero" id="home">
+        <section className="hero" id="home" data-aos="zoom-in">
             <div className="hero-container">
 
                 <div className="hero-social">
@@ -34,13 +35,12 @@ const Hero = () => {
                         id="hero-pic"
                         src={heroPic}
                         alt="heroPic"
-                        height={750}
-                        width={750}
+
                     />
                     <div className="hero-user-text">
                         <h2>Hello world!</h2>
+                        <p>I'm a&nbsp;<span className="typewriter"></span></p>
                         <h1>-G</h1>
-                        <p>Coding Lorem ipsum</p>
                     </div>
                 </div>
 

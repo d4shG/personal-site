@@ -4,7 +4,7 @@ import { FaFolder } from 'react-icons/fa';
 
 const Services = () => {
   return (
-    <section className="services background-svg">
+    <section className="services background-svg" data-aos="fade-up">
       <div className="services-title">
         <h2>My Services</h2>
       </div>
@@ -13,19 +13,19 @@ const Services = () => {
           <h3>IT Consulting</h3>
           <div className="folder">
             <FaFolder size={20} />
-            <p>Strategic IT Planning</p>
+            <p>IT Planning & Infrastructure Setup</p>
           </div>
           <div className="folder">
             <FaFolder size={20} />
-            <p>IT Infrastructure Setup</p>
+            <p>Database Management & Optimization</p>
           </div>
           <div className="folder">
             <FaFolder size={20} />
-            <p>Cloud Solutions & Migration</p>
+            <p>Data Recovery & System Troubleshooting</p>
           </div>
           <div className="folder">
             <FaFolder size={20} />
-            <p>Database Optimization</p>
+            <p>Web Administration & System Support</p>
           </div>
         </div>
 
@@ -33,15 +33,19 @@ const Services = () => {
           <h3>Developer Services</h3>
           <div className="folder">
             <FaFolder size={20} />
-            <p>Web Development</p>
+            <p>Custom Web Application Development</p>
           </div>
           <div className="folder">
             <FaFolder size={20} />
-            <p>Mobile App Development</p>
+            <p>Full Stack Development</p>
           </div>
           <div className="folder">
             <FaFolder size={20} />
-            <p>Custom Software Solutions</p>
+            <p>API Development & Integration</p>
+          </div>
+          <div className="folder">
+            <FaFolder size={20} />
+            <p>Database Design & Management</p>
           </div>
         </div>
       </div>
