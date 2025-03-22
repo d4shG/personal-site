@@ -78,7 +78,7 @@
     .portfolio-item {
         background-color: $background-shade;
         padding: 1.5rem;
-        border-radius: 1.25rem;
+        border-radius: $border-radius;
         width: 90%;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -217,11 +217,11 @@
 
     &-content {
         background-color: $background;
-        padding: 40px;
+        padding: 3rem;
         max-width: 90%;
         max-height: 90%;
         overflow-y: auto; 
-        border-radius: 12px;
+        border-radius: 1rem;
         position: relative;
         color: $text;
         display: flex;

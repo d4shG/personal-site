@@ -43,7 +43,7 @@
     background-color: $background-shade;
     padding: 1rem;
     width: 45%;
-    border-radius: 1.25rem 0.3rem;
+    border-radius: $border-radius;
     border: 2px solid $text-shade;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     position: relative;

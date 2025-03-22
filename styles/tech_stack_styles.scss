@@ -30,7 +30,7 @@
       position: relative;
       transition: 0.35s ease;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-      border-radius: 1.25rem 0.3rem;  
+      border-radius: $border-radius; 
       transform: perspective(500px) rotateX(10deg) skew(5deg); 
       
       svg {
