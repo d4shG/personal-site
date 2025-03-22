@@ -1,0 +1,145 @@
+#toast {
+    visibility: hidden;
+    max-width: 30rem;
+    height: 50px;
+    margin: auto;
+    background-color: $background-shade;
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+    right: 20px;
+    top: 20px;
+    font-size: 17px;
+    white-space: nowrap;
+    border-radius: $border-radius;
+
+    @include respond(tablet-landscape) {
+        max-width: 100%;
+        left: 20px;
+        right: auto;
+        width: calc(100% - 40px);
+        height: auto;
+        font-size: 16px;
+    }
+
+    @include respond(mobile) {
+        width: calc(100% - 40px);
+        font-size: 15px;
+    }
+
+    &.success {
+        background-color: $success-color;
+
+        #icon {
+            background-color: darken($success-color, 10%);
+        }
+    }
+
+    &.error {
+        background-color: $error-color;
+
+        #icon {
+            background-color: darken($error-color, 10%);
+        }
+    }
+
+    #icon {
+        width: 50px;
+        height: 50px;
+        float: left;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        box-sizing: border-box;
+        background-color: $background;
+        border-radius: $border-radius;
+
+        @include respond(tablet-landscape) {
+            width: 40px;
+            height: 40px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+
+        @include respond(mobile) {
+            width: 40px;
+            height: 40px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+    }
+
+    #text {
+        padding: 16px;
+        overflow: hidden;
+        white-space: nowrap;
+
+        @include respond(tablet-landscape) {
+            font-size: 14px;
+            padding: 12px;
+        }
+
+        @include respond(mobile) {
+            font-size: 13px;
+            padding: 10px;
+        }
+    }
+
+    &.show {
+        visibility: visible;
+        animation: fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 4s, fadeout 0.5s 4.5s;
+    }
+}
+
+@keyframes fadein {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+
+    to {
+        top: 20px;
+        opacity: 1;
+    }
+}
+
+@keyframes expand {
+    from {
+        min-width: 50px;
+    }
+
+    to {
+        min-width: 350px;
+    }
+}
+
+@keyframes stay {
+    from {
+        min-width: 350px;
+    }
+
+    to {
+        min-width: 350px;
+    }
+}
+
+@keyframes shrink {
+    from {
+        min-width: 350px;
+    }
+
+    to {
+        min-width: 50px;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        top: 20px;
+        opacity: 1;
+    }
+
+    to {
+        top: 50px;
+        opacity: 0;
+    }
+}
