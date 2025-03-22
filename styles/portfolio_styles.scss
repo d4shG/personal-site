@@ -1,16 +1,11 @@
 .portfolio {
     position: relative;
     padding: 5rem 0 2rem;
-    height: 50svh;
+    height: auto;
     background-color: $background;
-
-    @include respond(tablet-landscape) {
-        height: auto; 
-    }
 
     @include respond(phone) {
         padding: 1.5rem 0;
-        height: auto;
     }
 
     &-title {
@@ -84,6 +79,11 @@
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         position: relative;
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
 
         &:hover {
             box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
@@ -93,6 +93,7 @@
         h3 {
             font-size: 1.6rem;
             font-weight: 700;
+            width: 85%;
             color: $accent;
             margin-bottom: 1rem;
             text-align: center;
@@ -115,6 +116,17 @@
                 font-size: 0.9rem;
             }
         }
+        
+        .missing-duckie {
+            height: 10rem;
+            width: auto;
+        }
+
+        img{
+            height: auto;
+            width: 85%;
+        }
+
 
         &.changing {
             animation: fadeIn 0.75s ease-in-out;

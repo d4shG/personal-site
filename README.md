@@ -42,8 +42,8 @@ Make sure to set the following environment variables in your `.env.local` file t
 To get started, clone this repository and install the dependencies:
 
 ```bash
-git clone https://github.com/yourusername/yourportfolio.git
-cd yourportfolio
+git clone 
+cd personal-site
 npm install
 npm run dev
 ```
