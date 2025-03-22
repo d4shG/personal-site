@@ -22,7 +22,7 @@ export const servicesData = [
 export const projects = [
     {
       title: "This site💟",
-      markdownFile: "https://raw.githubusercontent.com/gb4rt0s/personal-site/refs/heads/main/README.md",
+      markdownFile: "https://raw.githubusercontent.com/d4shG/personal-site/refs/heads/main/README.md",
     },
     {
       title: "Aurum",
@@ -30,6 +30,6 @@ export const projects = [
     },
      {
       title: "SolarWatch",
-      markdownFile: "https://raw.githubusercontent.com/gb4rt0s/solarwatch-ci/refs/heads/main/README.md",
+      markdownFile: "https://raw.githubusercontent.com/d4shG/solarwatch-ci/refs/heads/main/README.md",
     },
   ];

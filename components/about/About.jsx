@@ -13,25 +13,34 @@ const About = () => {
     useEffect(() => {
         const fetchGitHubData = async () => {
             try {
-                const response = await fetch('https://api.github.com/users/gb4rt0s');
+                const response = await fetch('https://api.github.com/users/d4shG');
                 const data = await response.json();
-
+    
                 const createdAt = new Date(data.created_at);
                 const currentYear = new Date().getFullYear();
                 const experience = currentYear - createdAt.getFullYear();
                 setYearsOfExperience(experience);
-
+    
                 const reposResponse = await fetch(data.repos_url);
                 const reposData = await reposResponse.json();
                 setCompletedProjects(reposData.length);
-
+    
             } catch (error) {
-                console.error('Error fetching GitHub data:', error);
+                const fallbackYear = 2024;
+                const fallbackMultiplier = 5;
+
+                const currentYear = new Date().getFullYear();
+                const defaultExperience = currentYear - fallbackYear;
+                setYearsOfExperience(defaultExperience);
+    
+                const defaultProjects = defaultExperience * fallbackMultiplier;
+                setCompletedProjects(defaultProjects);
             }
         };
-
+    
         fetchGitHubData();
     }, []);
+
     return (
         <section className="about" id="about" data-aos="fade-up">
             <div className="wrapper">

@@ -12,7 +12,6 @@ const ContactForm = () => {
         timestamp: "",
     });
     const [errors, setErrors] = useState({});
-    const [submitted, setSubmitted] = useState(false);
     const [toastMessage, setToastMessage] = useState("");
     const [showToast, setShowToast] = useState(false);
     const [toastType, setToastType] = useState("");
@@ -71,8 +70,6 @@ const ContactForm = () => {
                 process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
             )
             .then((response) => {
-                console.log("SUCCESS!", response);
-                setSubmitted(true);
                 setFormData({
                     name: "",
                     email: "",
