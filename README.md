@@ -7,7 +7,8 @@ Welcome to my personal portfolio website! This is where you can explore my web d
 
 Here’s a quick demo of my project in action:
 
-![Showcase GIF](./readme_media/showcase.gif)
+![Showcase GIF](https://raw.githubusercontent.com/d4shG/personal-site/main/readme_media/showcase.gif)
+
 
 
 ## 🚀 Technologies Used
