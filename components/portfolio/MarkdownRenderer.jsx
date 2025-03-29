@@ -10,7 +10,6 @@ const MarkdownRenderer = ({ markdownFile }) => {
       try {
         const response = await fetch(markdownFile);
         
-        // Check if the response is OK
         if (!response.ok) {
           throw new Error('Failed to fetch markdown');
         }
