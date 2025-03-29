@@ -1,7 +1,7 @@
 .services {
   position: relative;
   padding: 2rem 0;
-  height: 40svh;
+  min-height: 40svh;
   background-color: $background-shade;
 
   @include respond(tablet-landscape) {
