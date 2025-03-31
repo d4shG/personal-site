@@ -128,6 +128,7 @@
             color: $text-shade;
             margin: 0;
             opacity: 0.9;
+            line-height: 1.3;
 
             @include respond(phone) {
                 font-size: 0.9rem;
