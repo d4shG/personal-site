@@ -1,0 +1,66 @@
+.language-switcher {
+    position: relative;
+    display: inline-block;
+
+    &-icon {
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+    }
+
+    &-dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: $background-shade;
+        border-radius: $border-radius;
+        width: 5rem;
+        font-size: 0.9rem;
+        cursor: pointer;
+        z-index: 2;
+        overflow: hidden;
+
+        li {
+            padding: 8px;
+            text-align: center;
+
+            &:hover {
+                background-color: $primary-shade;
+            }
+        }
+
+        @include respond(tablet-landscape) {
+            left: -70%;
+        }
+    }
+
+
+    &:hover {
+        .language-switcher-dropdown {
+            display: block;
+        }
+
+        .language-switcher-icon {
+            color: $primary;
+        }
+    }
+
+    &.open {
+        .language-switcher-dropdown {
+            display: block;
+        }
+
+        .language-switcher-icon {
+            color: $primary;
+        }
+    }
+
+
+    @include respond(tablet-landscape) {
+        .language-switcher-dropdown {
+            display: none;
+        }
+    }
+}
