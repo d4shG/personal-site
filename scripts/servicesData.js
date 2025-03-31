@@ -1,5 +1,3 @@
-import { Translation } from "react-i18next";
-
 export const techStackTitle = (lang) => {
     switch (lang) {
         case "hu":
