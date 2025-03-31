@@ -5,9 +5,13 @@ import { RiRobot3Fill } from 'react-icons/ri';
 import { FaGears, FaLaptopCode } from 'react-icons/fa6';
 import { LuBotMessageSquare } from 'react-icons/lu';
 import Link from 'next/link';
+import { useLanguage } from '@/context/LanguageProvider';
+import { navbarText } from '@/scripts/navbarData';
 
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState('#home');
+  const { language } = useLanguage();
+  const data = navbarText(language)
 
   const handleScroll = () => {
     const sections = ['home', 'about', 'services', 'portfolio', 'contact'];
@@ -36,31 +40,31 @@ const Navbar = () => {
         <ul className="navbar-menu">
           <li>
             <Link href="#home" className={activeLink === '#home' ? 'current' : ''}>
-              <h4>Home</h4>
+              <h4>{data.home}</h4>
               <IoTerminal />
             </Link>
           </li>
           <li>
             <Link href="#about" className={activeLink === '#about' ? 'current' : ''}>
-              <h4>About</h4>
+              <h4>{data.about}</h4>
               <RiRobot3Fill />
             </Link>
           </li>
           <li>
             <Link href="#services" className={activeLink === '#services' ? 'current' : ''}>
-              <h4>Services</h4>
+              <h4>{data.services}</h4>
               <FaGears />
             </Link>
           </li>
           <li>
             <Link href="#portfolio" className={activeLink === '#portfolio' ? 'current' : ''}>
-              <h4>Portfolio</h4>
+              <h4>{data.portfolio}</h4>
               <FaLaptopCode />
             </Link>
           </li>
           <li>
             <Link href="#contact" className={activeLink === '#contact' ? 'current' : ''}>
-              <h4>Contact</h4>
+              <h4>{data.contact}</h4>
               <LuBotMessageSquare />
             </Link>
           </li>

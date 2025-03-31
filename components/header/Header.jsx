@@ -1,9 +1,15 @@
 
 import Link from "next/link";
 import { LuBotMessageSquare } from "react-icons/lu";
+import { useLanguage } from "@/context/LanguageProvider";
+import { headerText } from "@/scripts/headerData";
+import LanguageSwitcher from '../languageSwitcher/LanguageSwitcher';
 
 
 const Header = () => {
+    const { language } = useLanguage();
+    const text = headerText(language)
+
     return (
         <header className="header">
             <div className="wrapper">
@@ -16,10 +22,11 @@ const Header = () => {
                     <div className="header-buttons">
                         <div className="main-button">
                             <Link href="#contact">
-                                <span>Contact me</span>
+                                <span>{text}</span>
                                 <LuBotMessageSquare />
                             </Link>
                         </div>
+                        <LanguageSwitcher />
                     </div>
                 </div>
             </div>

@@ -1,15 +1,18 @@
 import React from 'react';
-import { servicesData } from '@/scripts/data';
 import Service from './Service';
+import { useLanguage } from '@/context/LanguageProvider';
+import { servicesText } from '@/scripts/servicesData';
 
 const Services = () => {
+  const { language } = useLanguage();
+  const data = servicesText(language)
   return (
     <section className="services background-svg" data-aos="fade-up">
       <div className="services-title">
-        <h2>My Services</h2>
+        <h2>{data.title}</h2>
       </div>
       <div className="services-categories">
-        {servicesData.map((category, index) => (
+        {data.services.map((category, index) => (
           <div className="services-category" key={index}>
             <h3>{category.category}</h3>
             {category.services.map((service, idx) => (
