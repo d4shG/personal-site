@@ -1,4 +1,5 @@
 import "./globals.scss";
+import { LanguageProvider } from "@/context/LanguageProvider";
 
 export const metadata = {
   title: "dashG",
@@ -8,9 +9,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+
     <html lang="en">
       <body>
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );
