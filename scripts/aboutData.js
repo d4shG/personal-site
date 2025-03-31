@@ -23,7 +23,7 @@ const translations = {
 		details: {
 			title: "Ismerj meg!",
 			paragraph1:
-				"Lelkes és kíváncsi full-stack fejlesztő vagyok, aki kreatív és hatékony megoldásokat épít. Jelenleg az ASP.NET világába merülök el, hogy teljes stack fejlesztőként bővítsem a tudásom, és a skálázható adatbázisokat (különösen az MSSQL-t) is alaposabban megismerjem. Imádom azokat a kihívásokat, amik próbára teszik a problémamegoldó képességemet, és lehetőséget adnak a fejlődésre – szakmailag és személyesen is.",
+				"Lelkes és kíváncsi full-stack fejlesztő vagyok, aki kreatív és hatékony megoldásokat épít. Jelenleg az ASP.NET világába merülök el, hogy full stack fejlesztőként bővítsem a tudásom, és a skálázható adatbázisokat (különösen az MSSQL-t) is alaposabban megismerjem. Imádom azokat a kihívásokat, amik próbára teszik a problémamegoldó képességemet, és lehetőséget adnak a fejlődésre – szakmailag és személyesen is.",
 			paragraph2:
 				"Erős alapokkal rendelkezem C#, JavaScript és különféle webfejlesztési technológiák terén, mint például React, Next.js és SQL. Mindig izgatottan vágok bele olyan projektekbe, ahol a kreativitás, a logika és az innováció találkozik. Nyitott vagyok együttműködésre olyan megoldásokon, amik valódi hatást gyakorolnak.",
 			paragraph3:
