@@ -1,11 +1,11 @@
 .about {
-    height: 100svh;
     width: 100%;
-    padding: 5rem 1rem 3rem 1rem;
+    min-height: 100svh;
+    padding: 5rem 1rem;
     background-color: $background-shade;
 
     @include respond(tablet-landscape) {
-        padding: 3rem 0.5rem 1.5rem 0.5rem;
+        padding: 3rem 0.5rem;
         height: auto;
     }
 

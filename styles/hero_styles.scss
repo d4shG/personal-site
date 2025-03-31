@@ -187,6 +187,40 @@
     62.6744%, 67.2326% { content: "ravenclaw"; }
 }
 
+@keyframes typing-hu {
+    0.0000%, 27.3488% { content: ""; }
+    1.1395%, 26.2093% { content: "f"; }
+    2.2791%, 25.0698% { content: "fe"; }
+    3.4186%, 23.9302% { content: "fej"; }
+    4.5581%, 22.7907% { content: "feje"; }
+    5.6977%, 21.6512% { content: "fejle"; }
+    6.8372%, 20.5116% { content: "fejles"; }
+    7.9767%, 19.3721% { content: "fejleszt"; }
+    9.1163%, 18.2326% { content: "fejlesztő"; } 
+
+    30.7674%, 51.2791% { content: ""; }
+    31.9070%, 50.1395% { content: "t"; }
+    33.0465%, 49.0000% { content: "ta"; }
+    34.1860%, 47.8605% { content: "tan"; }
+    35.3256%, 46.7209% { content: "tana"; }
+    36.4651%, 45.5814% { content: "taná"; }
+    37.6047%, 44.4419% { content: "tanác"; }
+    38.7442%, 43.3023% { content: "tanács"; }
+    39.8838%, 42.1628% { content: "tanácsad"; }
+    41.0233%, 41.0233% { content: "tanácsadó"; }
+
+    54.6977%, 75.2093% { content: ""; }
+    55.8372%, 74.0698% { content: "h"; }
+    56.9767%, 72.9302% { content: "ho"; }
+    58.1163%, 71.7907% { content: "hol"; }
+    59.2558%, 70.6512% { content: "holl"; }
+    60.3953%, 69.5116% { content: "holló"; }
+    61.5349%, 68.3721% { content: "hollóh"; }
+    62.6744%, 67.2326% { content: "hollóhá"; }
+    63.8140%, 66.0930% { content: "hollóháti"; }
+}
+
+
 @keyframes blink {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
@@ -194,32 +228,20 @@
 
 .typewriter {
     display: inline-block;
-}
 
-.typewriter::before {
-    content: "";
-    animation: typing 13.5s infinite;
-}
-
-.typewriter::after {
-    content: "_";
-    animation: blink 0.5s linear infinite;
-    margin-left: 5px;
-}
-
-@media (prefers-reduced-motion) {
-    .typewriter::after {
-        animation: none;
-    }
-    
-    @keyframes sequencePopup {
-        0%, 100% { content: "developer"; }
-        25% { content: "consultant"; }
-        50% { content: "ravenclaw"; }
+    &::before {
+        content: "";
+        animation: typing 13.5s infinite;
     }
 
-    .typewriter::before {
-        content: "developer";
-        animation: sequencePopup 12s linear infinite;
+    &.hu::before {
+        content: "";
+        animation: typing-hu 13.5s infinite;
+    }
+
+    &::after {
+        content: "_";
+        animation: blink 0.5s linear infinite;
+        margin-left: 5px;
     }
 }

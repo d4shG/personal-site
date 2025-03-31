@@ -3,16 +3,19 @@ import React, { useState, useEffect } from 'react';
 import Modal from './Modal';
 import MarkdownRenderer from './MarkdownRenderer';
 import { TbPlayerTrackNextFilled, TbPlayerTrackPrevFilled } from "react-icons/tb";
-import { projects } from '@/scripts/data';
 import { FaReadme, FaGithubSquare } from "react-icons/fa";
 import Link from 'next/link';
-import Image from 'next/image';
-import { missingImage } from '@/scripts/data';
+import { missingImage } from '@/scripts/portfolioData';
+import { useLanguage } from '@/context/LanguageProvider';
+import { portfolioText } from '@/scripts/portfolioData';
 
 const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [changing, setChanging] = useState(false);
+  const { language } = useLanguage();
+  const data = portfolioText(language);
+  const projects = data.projects;
 
   const openProject = (project) => {
     setSelectedProject(project);
@@ -40,7 +43,7 @@ const Portfolio = () => {
     <>
       <section className="portfolio" id="portfolio" data-aos="fade-up">
         <div className="portfolio-title">
-          <h2>My Projects</h2>
+          <h2>{data.title}</h2>
         </div>
 
         <div className="portfolio-carousel">

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import duckie from "@/imgs/duckie.png";
 import Image from "next/image";
 
-const DuckieCard = () => {
+const DuckieCard = ({text}) => {
    const [isAnimating, setIsAnimating] = useState(false);
    const currentDate = new Date();
    const startOfYear = new Date(currentDate.getFullYear(), 0, 1);  
@@ -24,7 +24,7 @@ const DuckieCard = () => {
   return (
     <div className="about-card" onClick={handleClick}>
       <span>{duckies}</span>
-      <h3>Duckies given</h3>
+      <h3>{text}</h3>
       {isAnimating && (
         <div className="duck-animation-container">
           <Image
