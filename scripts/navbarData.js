@@ -21,6 +21,6 @@ export const navbarText = (lang) => {
 			return translations.hu;
 
 		default:
-			return translations.hu;
+			return translations.en;
 	}
 };
