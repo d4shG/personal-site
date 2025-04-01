@@ -7,6 +7,10 @@
         left: 50%;
         transform: translateX(-50%);
         bottom: 2.5rem;
+
+        @include respond(tablet-portrait) {
+            bottom: 1rem;
+        }
     }
 
     &-menu {
@@ -51,10 +55,10 @@
                 z-index: 1;
             }
 
-
         }
 
-        li:hover a, li:hover a.current {
+        li:hover a,
+        li:hover a.current {
             color: $background-shade;
         }
 
