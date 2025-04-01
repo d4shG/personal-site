@@ -6,12 +6,18 @@ import { PiFileSql } from 'react-icons/pi';
 import { IoLogoSass } from 'react-icons/io';
 import { IoLogoVercel } from "react-icons/io5";
 import { TbBrandCSharp } from "react-icons/tb";
+import { useLanguage } from '@/context/LanguageProvider';
+import { techStackTitle } from '@/scripts/servicesData';
 
 const TechStack = () => {
+  const { language } = useLanguage();
+  const title = techStackTitle(language)
+
+
   return (
     <section className="tech-stack" id="services" data-aos="fade-up">
       <div className="tech-stack-title">
-        <h3>My Tech Stack</h3>
+        <h3>{title}</h3>
       </div>
       <div className="tech-stack-icons">
       <div className="tech-stack-icon">
