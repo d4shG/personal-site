@@ -11,13 +11,13 @@ Here’s a quick demo of my project in action:
 
 
 
-## 🚀 Technologies Used
+## 🚀 Technologies Used  
 
-- **Next.js** – React framework for server-side rendering and static site generation.
-- **SCSS** – Powerful CSS preprocessor for clean and maintainable styling.
-- **React Icons** – For stylish icons that complement the design.
-- **Node.js** – Backend and API integration (if needed).
-- **Other tools and dependencies** – To bring everything together smoothly!
+- [![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/) – React framework for server-side rendering and static site generation.  
+- [![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white)](https://sass-lang.com/) – Powerful CSS preprocessor for writing clean and maintainable styles.  
+- [![React Icons](https://img.shields.io/badge/React%20Icons-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://react-icons.github.io/react-icons/) – Collection of stylish icons that enhance the design.  
+- [![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/) – Package manager for managing dependencies and scripts efficiently.  
+
 
 ## 🌟 Features
 
@@ -25,7 +25,6 @@ Here’s a quick demo of my project in action:
 - **Sleek Animations** – Subtle animations to enhance the user experience.
 - **Interactive Contact Form** – A contact form with form validation and smooth submission.
 - **Project Showcase** – Explore my coding projects, skills, and achievements.
-- **GitHub Integration** – A link to my GitHub profile for easy access to my open-source contributions.
 
 ## 🛠️ Environment Variables Setup
 
