@@ -26,6 +26,15 @@ const translations = {
 				githubLink: `https://github.com/${process.env.NEXT_PUBLIC_USERNAME}/solarwatch-ci`,
 				markdownFile: `https://raw.githubusercontent.com/${process.env.NEXT_PUBLIC_USERNAME}/solarwatch-ci/refs/heads/main/README.md`,
 			},
+			{
+				title: "LadleMeThis",
+				description:
+					"A whimsical recipe site designed to bring joy to cooking! Find recipes based on ingredients you already have or share your culinary creations. Built with a warm and vibrant design using Next.js, SCSS, and JWT-based authentication for a seamless user experience.",
+				image: "https://raw.githubusercontent.com/LadleMeThis/LadleMeThis/refs/heads/main/showcase/home.png",
+				githubLink: "https://github.com/LadleMeThis/LadleMeThis",
+				markdownFile: "https://raw.githubusercontent.com/LadleMeThis/LadleMeThis/refs/heads/main/README.md",
+			},
+			
 		],
 	},
 	hu: {
@@ -55,6 +64,15 @@ const translations = {
 				githubLink: `https://github.com/${process.env.NEXT_PUBLIC_USERNAME}/solarwatch-ci`,
 				markdownFile: `https://raw.githubusercontent.com/${process.env.NEXT_PUBLIC_USERNAME}/solarwatch-ci/refs/heads/main/README.md`,
 			},
+			{
+				title: "Ladlemethis",
+				description:
+					"Egy szeszélyes receptoldal, amely örömet hoz a főzésbe! Találj recepteket az alapján, ami már a konyhádban van, vagy oszd meg saját kulináris alkotásaidat. Next.js, SCSS és JWT-alapú hitelesítéssel készült, hogy zavartalan felhasználói élményt nyújtson, élénk és meleg dizájnnal.",
+					image: "https://raw.githubusercontent.com/LadleMeThis/LadleMeThis/refs/heads/main/showcase/home.png",
+					githubLink: "https://github.com/LadleMeThis/LadleMeThis",
+					markdownFile: "https://raw.githubusercontent.com/LadleMeThis/LadleMeThis/refs/heads/main/README.md",
+			},
+			
 		],
 	},
 };
