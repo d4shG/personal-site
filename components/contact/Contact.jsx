@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import { FaUser, FaEnvelope, FaComments } from "react-icons/fa";
-import emailjs from "emailjs-com";
 import Toast from "./Toast";
 import { useLanguage } from '@/context/LanguageProvider';
 import { contactText } from "@/scripts/contactData";
@@ -56,40 +55,49 @@ const ContactForm = () => {
         return isValid;
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-
+      
         if (!validateForm()) return;
-
+      
         const updatedFormData = {
-            ...formData,
-            timestamp: new Date().toISOString(),
+          ...formData,
+          timestamp: new Date().toISOString(),
         };
-
-        emailjs
-            .send(
-                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-                updatedFormData,
-                process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_ID
-            )
-            .then(() => {
-                setFormData({
-                    name: "",
-                    email: "",
-                    message: "",
-                    timestamp: "",
-                });
-                setToastMessage(data.form.toast.success);
-                setToastType("success");
-                setShowToast(true);
-            })
-            .catch(() => {
-                setToastMessage(data.form.toast.error);
-                setToastType("error");
-                setShowToast(true);
+      
+        try {
+          const response = await fetch('/api/contact', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(updatedFormData),
+          });
+      
+          const result = await response.json();
+      
+          if (response.ok) {
+            setFormData({
+              name: '',
+              email: '',
+              message: '',
+              timestamp: '',
             });
-    };
+            setToastMessage(data.form.toast.success);
+            setToastType('success');
+            setShowToast(true);
+          } else {
+            setToastMessage(result.error || 'Something went wrong!');
+            setToastType('error');
+            setShowToast(true);
+          }
+        } catch (error) {
+          setToastMessage(data.form.toast.error);
+          setToastType('error');
+          setShowToast(true);
+        }
+      };
+      
 
     return (
         <section className="contact background-svg" id="contact" data-aos="fade-up">
