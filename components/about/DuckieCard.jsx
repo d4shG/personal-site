@@ -1,28 +1,62 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import duckie from "@/imgs/duckie.png";
 import Image from "next/image";
+import { debounce } from "@/scripts/utils";
 
-const DuckieCard = ({text}) => {
-   const [isAnimating, setIsAnimating] = useState(false);
-   const currentDate = new Date();
-   const startOfYear = new Date(currentDate.getFullYear(), 0, 1);  
-   const daysPassed = Math.floor((currentDate - startOfYear) / (1000 * 60 * 60 * 24)); 
-   const [duckies, setDuckies] = useState(daysPassed);
+const DuckieCard = ({ text }) => {
+  const [duckies, setDuckies] = useState(0);
+  const initialDuckies = useRef(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  const GetDuckiesData = useCallback(async () => {
+    const response = await fetch('/api/duckies');
+    const data = await response.json();
+    setDuckies(data);
+    initialDuckies.current = data;
+  }, []);
+
+  const updateDuckies = useCallback(
+    debounce(async (duckies) => {
+      await fetch('/api/duckies', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ duckies }),
+      });
+    }
+      , 2000),
+    []
+  );
 
   const handleClick = () => {
-    if (isAnimating) return; 
+    if (isAnimating)
+      return;
+
     setDuckies((prev) => prev + 1);
     setIsAnimating(true);
 
-
-    setTimeout(() => {
-      setIsAnimating(false);
-    }, 2000);
+    setTimeout(() => setIsAnimating(false), 2000);
   };
 
+  useEffect(() => {
+    GetDuckiesData();
+  }, [GetDuckiesData]);
+
+
+  useEffect(() => {
+    if (duckies > initialDuckies.current) 
+      updateDuckies(duckies);
+    
+  }, [duckies, updateDuckies]);
+
   return (
-    <div className="about-card" onClick={handleClick}>
+    <div
+      className="about-card"
+      onClick={handleClick}
+      aria-label={`Duckies: ${duckies}`}
+    >
       <span>{duckies}</span>
       <h3>{text}</h3>
       {isAnimating && (
