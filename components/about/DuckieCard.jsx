@@ -2,7 +2,6 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import duckie from "@/imgs/duckie.png";
 import Image from "next/image";
-import { fetchDuckiesData, updateDuckiesData } from "@/scripts/redisData";
 import { debounce } from "@/scripts/utils";
 
 const DuckieCard = ({ text }) => {
@@ -11,14 +10,21 @@ const DuckieCard = ({ text }) => {
   const [isAnimating, setIsAnimating] = useState(false);
 
   const GetDuckiesData = useCallback(async () => {
-    const data = await fetchDuckiesData();
+    const response = await fetch('/api/duckies');
+    const data = await response.json();
     setDuckies(data);
     initialDuckies.current = data;
   }, []);
 
   const updateDuckies = useCallback(
     debounce(async (duckies) => {
-      await updateDuckiesData(duckies)
+      await fetch('/api/duckies', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ duckies }),
+      });
     }
       , 2000),
     []
