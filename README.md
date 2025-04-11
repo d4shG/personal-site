@@ -30,12 +30,16 @@ Here’s a quick demo of my project in action:
 
 Make sure to set the following environment variables in your `.env.local` file to configure the necessary services:
 
-- **NEXT_PUBLIC_EMAILJS_SERVICE_ID** ✉️: The service ID for EmailJS to send emails.
-- **NEXT_PUBLIC_EMAILJS_TEMPLATE_ID** 📝: The template ID for the email you want to send via EmailJS.
-- **NEXT_PUBLIC_EMAILJS_PUBLIC_ID** 🔑: The public key provided by EmailJS to authenticate API requests.
 - **NEXT_PUBLIC_USERNAME** 👤: Your username for personal or app-related usage.
 - **NEXT_PUBLIC_GITHUB_LINK** 🖥️: Link to your GitHub profile or repository.
 - **NEXT_PUBLIC_LINKEDIN_LINK** 💼: Link to your LinkedIn profile for networking.
+- **REDIS_URL** 🌐: The URL of your Redis server for connecting to the database.
+- **REDIS_TOKEN** 🔑: The token required to authenticate with your Redis server.
+- **EMAIL_HOST** 📧: The host address for your email service provider.
+- **EMAIL_PORT** ⚙️: The port used for connecting to your email service provider.
+- **EMAIL_USER** 📬: The email address used to send emails.
+- **EMAIL_PASS** 🔐: The password or app-specific password for your email account.
+
 
 ## 🛠️ Installation Instructions
 
